@@ -1,3 +1,6 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
 <br><br>
 <h1>Mustafiz's Blog</h1>
 <h2>Mustafiz has written {{ bon.count }} blog{{ bon.count|pluralize }} </h2>
@@ -14,3 +17,5 @@
 <br><a href="{{ egg.url}}">Link</a>
 {% endif %}
 {% endfor %}
+
+{% endblock %}

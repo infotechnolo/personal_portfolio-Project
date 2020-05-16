@@ -7,4 +7,5 @@ class all_blog(models.Model):
     image = models.ImageField(upload_to='media/blog/images/', blank=True)
     url = models.URLField(blank=True)
 
-    
+    def __str__(self):
+        return self.title
