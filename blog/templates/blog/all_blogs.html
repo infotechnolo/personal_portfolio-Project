@@ -1,11 +1,12 @@
 <br><br>
 <h1>Mustafiz's Blog</h1>
+<h2>Mustafiz has written {{ bon.count }} blog{{ bon.count|pluralize }} </h2>
 
 {% for egg in bon %}
 
-<h2>{{ egg.title }}</h2>
-<h3>{{ egg.date }}</h3>
-<p>{{ egg.description }}</p>
+<a href="{% url 'blog:detail' egg.id %}"><h2>{{ egg.title }}</h2></a>
+<h3>{{ egg.date|date:'M d Y'|upper }}</h3>
+<p>{{ egg.description|striptags|truncatechars:50 }}</p>
 {% if egg.image %}
 <img src="{{ egg.image.url }}">
 {% endif %}
