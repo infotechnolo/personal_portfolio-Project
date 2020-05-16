@@ -7,7 +7,7 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('', views.all_blogs, name='all_blogs'),
+    path('', views.test, name='test'),
 ]
 # we have to import static, this functinality from Django project which we have import here.
 

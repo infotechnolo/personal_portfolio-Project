@@ -1,15 +1,15 @@
 <br><br>
 <h1>Mustafiz's Blog</h1>
 
-{% for all_blogs in all_blogs %}
+{% for egg in bon %}
 
-<h2>{{ all_blogs.title }}</h2>
-<h3>{{ all_blogs.date }}</h3>
-<p>{{ all_blogs.description }}</p>
-{% if all_blogs.image %}
-<img src="{{ all_blogs.image.url }}">
+<h2>{{ egg.title }}</h2>
+<h3>{{ egg.date }}</h3>
+<p>{{ egg.description }}</p>
+{% if egg.image %}
+<img src="{{ egg.image.url }}">
 {% endif %}
-{% if all_blogs.url %}
-<br><a href="{{ all_blogs.url}}">Link</a>
+{% if egg.url %}
+<br><a href="{{ egg.url}}">Link</a>
 {% endif %}
 {% endfor %}

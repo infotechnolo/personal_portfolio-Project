@@ -1,11 +1,11 @@
 <h1>Mustafiz's Portfolio</h1>
 
-{% for project in projects %}
+{% for egg in bon %}
 
-<h2>{{ project.title }}</h2>
-<p>{{ project.description }}</p>
-<img src="{{ project.image.url }}">
-{% if project.url %}
-<br><a href="{{ project.url}}">Link</a>
+<h2>{{ egg.title }}</h2>
+<p>{{ egg.description }}</p>
+<img src="{{ egg.image.url }}">
+{% if egg.url %}
+<br><a href="{{ egg.url}}">Link</a>
 {% endif %}
 {% endfor %}
